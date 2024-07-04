@@ -103,7 +103,7 @@ export default function DashboardPage() {
                 <div className="py-12 px-6 grid grid-cols-1 w-full
             md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {blogs?.map(blogItem => (
-                        <Link href={`/blog/${blogItem.blog_id}`}>
+                        <Link key={blogItem.blog_id} href={`/blog/${blogItem.blog_id}`}>
                             <div className="text-white border border-white/20 bg-[#090909] 
                             hover:border-white/50 rounded-lg py-12 w-full px-6 
                             smooth cursor-pointer">
