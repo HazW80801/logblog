@@ -6,7 +6,7 @@ const replicate = new Replicate({
     auth: process.env.REPLICATE_KEY
 });
 
-export const runtime = 'edge';
+export const runtime = "edge"
 
 export async function POST(req) {
     const { prompt, business_Description } = await req.json();

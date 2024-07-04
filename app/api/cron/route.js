@@ -1,11 +1,9 @@
 import { supabase } from '@/config/supabase_client'
 import { NextRequest, NextResponse } from 'next/server'
 import { v4 as uuidv4 } from "uuid"
-export const config = {
-    runtime: 'edge',
-}
+export const runtime = "edge"
 
-export async function POST(req) { //GET
+export async function GET(req) { //GET
     const response = await update()
     return new NextResponse(JSON.stringify(response), {
         status: 200,
