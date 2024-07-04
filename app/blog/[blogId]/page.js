@@ -147,7 +147,7 @@ export default function BlogPage() {
                 </span>}
                 <div className="space-y-4 w-full">
                     {posts?.filter(post => post.state == "draft").map(post => (
-                        <Link href={`/post/${post.post_id}`}>
+                        <Link key={post.post_id} href={`/post/${post.post_id}`}>
                             <div className="post_title"
                                 dangerouslySetInnerHTML={{ __html: marked(post.title) }}
                             />
@@ -162,7 +162,7 @@ export default function BlogPage() {
                     in review
                 </h3>
                 {posts?.filter(post => post.state == "in review").map(post => (
-                    <div className="w-full py-4 items-start justify-start flex text-white px-4">
+                    <div key={post.post_id} className="w-full py-4 items-start justify-start flex text-white px-4">
                         <h2 className="post_title">{post.title}</h2>
                     </div>
                 ))}
@@ -173,7 +173,7 @@ export default function BlogPage() {
                     Published
                 </h3>
                 {posts?.filter(post => post.state == "published").map(post => (
-                    <Link href={`/post/${post.post_id}`} className="w-full">
+                    <Link key={post.post_id} href={`/post/${post.post_id}`} className="w-full">
                         <div className="w-full py-4 items-start justify-start flex text-white px-4">
                             <h2 className="post_title">{post.title}</h2>
                         </div>
