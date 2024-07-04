@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { v4 as uuidv4 } from "uuid"
 export const runtime = "edge"
 
-export async function GET(req) { //GET
+export async function GET(req) { // GET
     const response = await update()
     return new NextResponse(JSON.stringify(response), {
         status: 200,
@@ -23,7 +23,8 @@ async function update() {
             let payload = {
                 business_desc: blog_description
             }
-            const response = await fetch('http://localhost:3000/api/idea', {
+            // https://logblog-coral.vercel.app/
+            const response = await fetch('https://logblog-coral.vercel.app/api/idea', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -60,8 +61,8 @@ async function update() {
 
         }
         const generatePost = async () => {
-
-            const response = await fetch('http://localhost:3000/api/generate', {
+            // https://logblog-coral.vercel.app/
+            const response = await fetch('https://logblog-coral.vercel.app/api/generate', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
