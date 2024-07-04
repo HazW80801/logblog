@@ -14,6 +14,7 @@ export async function POST(req) { //GET
 // the function u wanna run
 // 1. generate blog article idea
 // 2. generate blog post
+// 3. store to the database
 async function update() {
     const { data: fetchedBlogs, error } = await supabase.from("blogs").select()
     for (const blog of fetchedBlogs) {
