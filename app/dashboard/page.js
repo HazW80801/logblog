@@ -51,14 +51,14 @@ export default function DashboardPage() {
         fetchBlogs()
     }
 
-    const testCron = async () => {
-        const response = await fetch('/api/cron', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        });
-    }
+    // const testCron = async () => {
+    //     const response = await fetch('/api/cron', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //     });
+    // }
     return <div className="bg-[#050505] min-h-screen w-full items-center justify-center relative">
         <Header />
         <AuthUser />
@@ -114,6 +114,6 @@ export default function DashboardPage() {
                 </div>
             }
         </div>
-        <button className="button" onClick={testCron}>test</button>
+        {/* <button className="button" onClick={testCron}>test</button> */}
     </div>
 }
