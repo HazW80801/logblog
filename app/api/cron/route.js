@@ -62,7 +62,7 @@ async function update() {
         }
         const generatePost = async () => {
             // https://logblog-coral.vercel.app/
-            const response = await fetch('https://logblog-coral.vercel.app/api/generate', {
+            const response = await fetch('https://logblogs.vercel.app/api/generate', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
