@@ -115,7 +115,7 @@ export default function BlogPostPage() {
                  group-hover:translate-x-1 group-hover:-translate-y-1 smooth" />}
             </Link>
 
-            <div className=" bg-white text-black 
+            <div className=" bg-white text-black
             py-12 px-6 min-h-screen w-3/4 mb-12">
                 {(loading || !postData?.content) ?
                     <div className="text-black">

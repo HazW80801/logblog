@@ -24,7 +24,7 @@ async function update() {
                 business_desc: blog_description
             }
             // https://logblog-coral.vercel.app/
-            const response = await fetch('https://logblog-coral.vercel.app/api/idea', {
+            const response = await fetch('https://logblogs.vercel.app/api/idea', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
