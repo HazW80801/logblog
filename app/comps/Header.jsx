@@ -19,7 +19,7 @@ export default function Header() {
 
     return (
         <div className="w-full border-b border-white/5 py-4
-        px-4 items-center justify-between flex z-50 ">
+        px-4 items-center justify-between flex z-50">
             <Link href="/dashboard" prefetch className="text-white">
                 Log
                 <b className="font-mono opacity-90">Blog.</b>
@@ -35,24 +35,23 @@ export default function Header() {
                     }
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-black text-white border-white border-white/10">
-                    <Link href={"/dashboard"} >
-                        <DropdownMenuItem className="dropmenu_item">
+                    <Link href={"/dashboard"} className="link" >
+                        <DropdownMenuItem className="dropdownmenu_item"  >
                             dashboard
                         </DropdownMenuItem>
                     </Link>
-                    <Link href={"/usage"} >
-
-                        <DropdownMenuItem className="dropmenu_item">
+                    <Link href={"/usage"} className="link" >
+                        <DropdownMenuItem className="dropdownmenu_item" >
                             usage
                         </DropdownMenuItem>
                     </Link>
-                    <Link href={"/plans"} >
-                        <DropdownMenuItem className="dropmenu_item">
+                    <Link href={"/plans"} className="link" >
+                        <DropdownMenuItem className="dropdownmenu_item"  >
                             plans
                         </DropdownMenuItem>
                     </Link>
                     <DropdownMenuSeparator className="bg-white/10" />
-                    <DropdownMenuItem className="dropmenu_item"
+                    <DropdownMenuItem className="link"
                         onClick={signOut}>logout</DropdownMenuItem>
                 </DropdownMenuContent>
             </DropdownMenu>

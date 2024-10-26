@@ -24,7 +24,7 @@
   @layer utilities {
      .wrap {
         @apply min-h-screen bg-[#050505] items-center
-         justify-center w-full flex flex-col relative
+         justify-start w-full flex flex-col relative
     }
     .button {
         @apply border border-white/10 px-4 py-3 text-white w-auto
@@ -38,6 +38,7 @@
       @apply border border-white/10 px-4 py-3 text-black w-auto font-medium
         bg-white smooth text-sm rounded-md hover:scale-95 cursor-pointer text-center
     }
+   
     .smooth {
         @apply duration-150 ease-in-out transition-all
     }
@@ -46,8 +47,12 @@
          py-2 px-2 smooth border-b border-white/10 hover:border-white
     }
     .link {
-      @apply text-white/50 hover:text-white smooth
+      @apply text-white/50 hover:text-white smooth cursor-pointer
     }
+    .dropdownmenu_item {
+      @apply cursor-pointer link
+    }
+   
     .post_state {
       @apply w-full border-b border-white/10 mb-6 text-center
                  py-4 px-2 text-white/50 font-bold text-lg
